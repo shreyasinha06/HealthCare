@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<title> Template1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0;
+background-color:powderblue;}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1 style="background-color: TEAL"><b>MASH FITNESS</b></h1>
+  <p>Welcome to the website of <span class="w3-tag">quality care</span></p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-teal">
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="D:\H3/img1.jpg" style="width:868px;height:250px;">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="D:\H3/img99.jpg" style="width:868px;height:250px;"">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="D:\H3/img9.jpg" style="width:868px;height:250px;">
+  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
+    <div class="w3-container">
+      <h3 style="text-decoration: underline"><b>FITNESS</b></h3>
+      <h5>Celebrating Health</h5>
+    </div>
+
+    <div class="w3-container">
+      <p>"Fitness" is a broad term that means something different to each person, but it refers to your own optimal health and overall well-being. Being fit not only means physical health, but emotional and mental health, too.  Smart eating and active living are fundamental to fitness.
+      When you are fit, you have:<br>
+           Energy to do what's important to you and to be more productive<br>
+            Stamina and a positive outlook to handle the mental challenges and emotional ups and downs of everyday life and to deal with stress<br>
+             Reduced risk for many health problems, such as heart disease, cancer, diabetes and osteoporosis<br>
+              The chance to look and feel your best<br>
+              
+                A better chance for a higher quality of life and perhaps a longer life, too</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-teal">
+  <img src="D:\H3/imgg.jpg" alt="Norway" style="width:868px;height:250px;">
+    <div class="w3-container">
+      <h3 style="text-decoration: underline"><b>PERFORMANCE MANAGEMENT CHART</b></h3>
+      <h5 style="red">check <span class="w3-opacity">your daily improvements</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>The Performance Management Chart (PMC) can help you track and plan your Fitness and Fatigue to ensure that you are gaining enough fitness and recovering sufficiently. It is essential to maintain your fitness level to lead a healthy , disease and tension free life. After our analysis of the parameters that make up our performance management chart, we then interpret these values.
+
+.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-card-4 w3-margin w3-teal">
+  <img src="D:\H3/img11.jpg" alt="Norway" style="width:868px;height:250px;">
+    <div class="w3-container">
+      <h3 style="text-decoration: underline"><b>Eat wise, drop a size</b></h3>
+      <h5>beginning is always <span class="w3-opacity">the hardest</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>A healthy eating plan gives your body the nutrients it needs every day while staying within your daily calorie goal for weight loss. A healthy eating plan also will lower your risk for heart disease and other health conditions.The best way to give your body the balanced nutrition it needs is by eating a variety of nutrient-packed foods every day. Just be sure to stay within your calorie needs.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <img src="D:\H3/h.jpeg" style="width:100%">
+    <div class="w3-container w3-teal">
+      <h4 style="text-decoration: underline"><b><i>About MASH</i></b></h4>
+      <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. That's the reason why we are providing you with an online health service and analysis provider where you can accurately measure all your day-to-day activities.</p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4 style="text-decoration: underline"><i>Healthy Living</i></h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-teal">
+      <li class="w3-padding-16">
+        <img src="D:\H3/img22.jpg" alt="Image" class="w3-left w3-margin-right" style="width:120px;height: 65px">
+        <span class="w3-large">Daily challenges</span><br>
+        <span>every change is a challenge</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="D:\H3/img33.jpg" alt="Image" class="w3-left w3-margin-right" style="width:120px;height: 65px">
+        <span class="w3-large">Weekly challenges</span><br>
+         
+        <span>challenges are what make life interesting</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="D:\H3/img66.jpg" alt="Image" class="w3-left w3-margin-right" style="width:120px;height: 65px" >
+        <span class="w3-large">Motivational fitness quotes</span><br>
+        <span>you see sweat i see healthy glow</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="D:\H3/img44.png" alt="Image" class="w3-left w3-margin-right" style="width:120px;height: 65px">
+        <span class="w3-large">Daily videos</span><br>
+        <span>work for it!!!</span>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-teal">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Food</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Exercises</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">City</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Videos</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Non-Veg-Diet</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Veg-Diet</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Walk</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Outlook</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Positivity</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top; background= Teal">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">MASH FITNESS</a></p>
+</footer>
+
+</body>
+</html>
